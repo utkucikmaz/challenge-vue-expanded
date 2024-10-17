@@ -48,7 +48,6 @@ watch(
 </script>
 
 <style scoped>
-/* Spinner styling */
 .spinner {
   border: 4px solid #f3f3f3;
   border-top: 4px solid #3498db;
@@ -60,7 +59,6 @@ watch(
   margin: 30% auto;
 }
 
-/* Keyframe for spinner */
 @keyframes spin {
   0% {
     transform: rotate(0deg);
@@ -70,7 +68,6 @@ watch(
   }
 }
 
-/* Loaded image styling */
 .loaded-image {
   width: 100%;
   height: 20rem;
@@ -78,25 +75,21 @@ watch(
   border-radius: 0.5rem;
 }
 
-/* Responsive styling for smaller screens using CSS3 media queries */
-
-/* Small screens (Tailwind 'sm' equivalent) */
 @media (max-width: 640px) {
   .loaded-image {
-    height: 8rem; /* Smaller height for small screens */
-    border-radius: 0.25rem; /* Slightly smaller border radius */
+    height: 8rem; 
+    border-radius: 0.25rem; 
   }
 
   .spinner {
     width: 30px;
-    height: 30px; /* Smaller spinner */
+    height: 30px; 
   }
 }
 
-/* Medium screens (Tailwind 'md' equivalent) */
 @media (max-width: 768px) {
   .loaded-image {
-    height: 10rem; /* Medium size image for medium screens */
+    height: 10rem; 
     border-radius: 0.375rem;
   }
 
@@ -106,29 +99,25 @@ watch(
   }
 }
 
-/* Large screens (Tailwind 'lg' equivalent) */
 @media (max-width: 1024px) {
   .loaded-image {
     height: 12rem;
-    border-radius: 0.5rem; /* Slightly larger border-radius */
+    border-radius: 0.5rem; 
   }
-
   .spinner {
     width: 40px;
     height: 40px;
   }
 }
 
-/* Extra large screens (Tailwind 'xl' equivalent) */
 @media (min-width: 1280px) {
   .loaded-image {
-    height: 25rem; /* Larger images on bigger screens */
-    border-radius: 0.75rem; /* Increased border radius */
+    height: 25rem; 
+    border-radius: 0.75rem;
   }
-
   .spinner {
     width: 50px;
-    height: 50px; /* Larger spinner on bigger screens */
+    height: 50px; 
   }
 }
 </style>

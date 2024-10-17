@@ -1,35 +1,47 @@
-# vue-project
+# Food Help App
 
-This template should help get you started developing with Vue 3 in Vite.
+Welcome to the **Essen App**! This application helps users find recipes based on their selected criteria, including effort, cost, and vegetarian options. Add them to your favorites and mark them as to cook or cooked.
 
-## Recommended IDE Setup
+## Features
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+- **Effort**: Choose recipes based on the amount of effort required.
+- **Cost**: Filter recipes by their cost.
+- **Vegetarian**: Select whether you want vegetarian recipes.
 
-## Customize configuration
+## Demo
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+You can view a live demo of the application at: [https://challenge-vue-expanded.vercel.app/](https://challenge-vue-expanded.vercel.app/)
 
-## Project Setup
+## Screenshots
 
-```sh
-npm install
-```
+Here are some examples of what the app looks like:
 
-### Compile and Hot-Reload for Development
+### Example 1: Recipe Overview
 
-```sh
-npm run dev
-```
+![Recipe Overview](./src/assets/images/1.png)
 
-### Compile and Minify for Production
+### Example 2: Recipe Details
 
-```sh
-npm run build
-```
+![Recipe Details](./src/assets/images/2.png)
 
-### Lint with [ESLint](https://eslint.org/)
+### Example 3: Favorite Details
 
-```sh
-npm run lint
-```
+![Favorite Details](./src/assets/images/3.png)
+
+## Usage
+
+    - Select Criteria: Use the filters to choose recipes based on effort, cost, and whether they are vegetarian.
+    - View Recipes: Browse the list of recipes that match your criteria.
+    - Recipe Details: Click on a recipe to view more details, including ingredients and cooking instructions.
+
+### Contributing
+
+If you want to contribute to the project, follow these steps:
+
+    - Fork the repository.
+    - Restore Node Modules
+    - Create a new branch (git checkout -b feature-branch).
+    - Make your changes.
+    - Commit your changes
+    - Push to the branch
+    - Open a pull request.

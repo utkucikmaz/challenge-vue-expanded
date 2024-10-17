@@ -210,69 +210,55 @@ onUnmounted(() => {
   margin-bottom: 0.5rem;
 }
 
-/* Responsive styling for smaller screens */
 @media (max-width: 768px) {
   .modal-content {
     padding: 1rem;
     max-width: 90%;
   }
-
   .meal-title {
     font-size: 1.25rem;
     margin-bottom: 3rem;
   }
-
   .meal-img {
     width: 80%;
     height: auto;
   }
-
   .meal-details {
     padding: 0.75rem;
   }
-
   .meal-props {
     flex-direction: row;
     gap: 0.5rem;
   }
-
   .shopping-list-title {
     font-size: 1.1rem;
   }
-
   .shopping-list li {
     font-size: 0.9rem;
   }
 }
 
-/* Extra small screens (like mobile phones) */
 @media (max-width: 640px) {
   .modal-content {
     padding: 0.5rem;
     max-width: 100%;
   }
-
   .meal-title {
     font-size: 1.1rem;
   }
-
   .meal-img {
     width: 100%;
     height: auto;
   }
-
   .meal-details {
     padding: 0.5rem;
   }
-
   .meal-props {
     gap: 0.3rem;
   }
-
   .shopping-list-title {
     font-size: 1rem;
   }
-
   .shopping-list li {
     font-size: 0.8rem;
   }

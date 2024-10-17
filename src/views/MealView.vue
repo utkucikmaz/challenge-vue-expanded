@@ -403,14 +403,6 @@ const handleRandomizeClick = () => {
     font-size: 1rem;
   }
 
-  .button-group {
-    flex-direction: column;
-  }
-
-  .button {
-    width: 100%;
-  }
-
   .meal-props {
     gap: 1rem;
   }
