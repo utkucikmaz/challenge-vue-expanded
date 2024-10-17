@@ -1,4 +1,3 @@
-<!-- ImageLoader.vue -->
 <template>
   <div>
     <div v-if="loading" class="spinner"></div>
@@ -49,6 +48,7 @@ watch(
 </script>
 
 <style scoped>
+/* Spinner styling */
 .spinner {
   border: 4px solid #f3f3f3;
   border-top: 4px solid #3498db;
@@ -60,6 +60,7 @@ watch(
   margin: 30% auto;
 }
 
+/* Keyframe for spinner */
 @keyframes spin {
   0% {
     transform: rotate(0deg);
@@ -69,10 +70,65 @@ watch(
   }
 }
 
+/* Loaded image styling */
 .loaded-image {
   width: 100%;
   height: 20rem;
   object-fit: cover;
   border-radius: 0.5rem;
+}
+
+/* Responsive styling for smaller screens using CSS3 media queries */
+
+/* Small screens (Tailwind 'sm' equivalent) */
+@media (max-width: 640px) {
+  .loaded-image {
+    height: 8rem; /* Smaller height for small screens */
+    border-radius: 0.25rem; /* Slightly smaller border radius */
+  }
+
+  .spinner {
+    width: 30px;
+    height: 30px; /* Smaller spinner */
+  }
+}
+
+/* Medium screens (Tailwind 'md' equivalent) */
+@media (max-width: 768px) {
+  .loaded-image {
+    height: 10rem; /* Medium size image for medium screens */
+    border-radius: 0.375rem;
+  }
+
+  .spinner {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+/* Large screens (Tailwind 'lg' equivalent) */
+@media (max-width: 1024px) {
+  .loaded-image {
+    height: 12rem;
+    border-radius: 0.5rem; /* Slightly larger border-radius */
+  }
+
+  .spinner {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* Extra large screens (Tailwind 'xl' equivalent) */
+@media (min-width: 1280px) {
+  .loaded-image {
+    height: 25rem; /* Larger images on bigger screens */
+    border-radius: 0.75rem; /* Increased border radius */
+  }
+
+  .spinner {
+    width: 50px;
+    height: 50px; /* Larger spinner on bigger screens */
+  }
 }
 </style>

@@ -85,7 +85,7 @@
     </button>
   </div>
   <div class="length-info">
-    {{ mealLength }}
+      {{ mealLength }}
   </div>
 </template>
 
@@ -287,5 +287,92 @@ label {
   margin-top: 5rem;
   font-size: 1.5rem;
   font-weight: 500;
+}
+@media screen and (max-width: 1280px) {
+  .heading {
+    font-size: 1.5rem;
+  }
+
+  .selection-card {
+    padding: 1rem;
+    width: 90%;
+  }
+
+  .form-group {
+    gap: 0.75rem;
+  }
+
+  .label {
+    font-size: 1rem;
+    width: 40%;
+  }
+
+  .input-group {
+    gap: 1rem;
+  }
+
+  .radio-label {
+    padding: 0.5rem;
+  }
+
+  .button-group {
+    flex-direction: column;
+    width: 100%;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .length-info {
+    margin-left: 2rem;
+    font-size: 1rem;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .heading {
+    font-size: 1.25rem;
+  }
+
+  .selection-card {
+    padding: 0.75rem;
+    width: 100%;
+  }
+
+  .form-group {
+    gap: 0.5rem;
+  }
+
+  .label {
+    font-size: 0.875rem;
+  }
+
+  .radio-label {
+    padding: 0rem;
+    flex-direction: column;
+  }
+
+   .button-group {
+    flex-direction: column;
+    width: 90%;
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    padding-right: 2rem;
+  }
+
+  .length-info {
+    margin-left: 1rem;
+    font-size: 1rem;
+    width: 100%;
+    text-align: center;
+  }
 }
 </style>

@@ -46,9 +46,7 @@ const closeModal = () => {
   background-color: white;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   cursor: pointer;
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .meal-card:hover {
@@ -78,5 +76,64 @@ const closeModal = () => {
   font-weight: 600;
   color: #333;
   margin: 0;
+}
+
+
+@media (max-width: 640px) {
+  .meal-card {
+    width: 14rem; 
+  }
+
+  .meal-image-wrapper {
+    height: 6rem; 
+  }
+
+  .meal-name {
+    font-size: 1rem; 
+  }
+}
+
+@media (max-width: 768px) {
+  .meal-card {
+    width: 12rem; 
+  }
+
+  .meal-image-wrapper {
+    height: 5rem; 
+  }
+
+  .meal-name {
+    font-size: 0.95rem; 
+  }
+}
+
+
+@media (max-width: 1024px) {
+  .meal-card {
+    width: 10rem;
+  }
+
+  .meal-image-wrapper {
+    height: 4.5rem; 
+  }
+
+  .meal-name {
+    font-size: 0.9rem;
+  }
+}
+
+
+@media (min-width: 1280px) {
+  .meal-card {
+    width: 18rem; 
+  }
+
+  .meal-image-wrapper {
+    height: 10rem; 
+  }
+
+  .meal-name {
+    font-size: 1.2rem;
+  }
 }
 </style>

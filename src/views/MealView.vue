@@ -54,7 +54,7 @@
     </div>
     <RouterLink to="/favorites" class="favorite-button">
       <div class="fav-text">Favoriten</div>
-      <img :src="starIcon" alt="Favorites List" width="50" height="50" />
+      <img :src="starIcon" alt="Favorites List" />
     </RouterLink>
   </div>
 
@@ -78,7 +78,7 @@
       Nächste
     </button>
   </div>
-  <MealList />
+  <MealList class="carousel"/>
 </template>
 
 <script setup>
@@ -285,5 +285,144 @@ const handleRandomizeClick = () => {
 
 .fav-text:active {
   background-color: #33b1a5;
+}
+@media (max-width: 1280px) {
+  .meal-card {
+    width: 75%;
+    height: auto;
+  }
+
+  .meal-content {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .meal-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .meal-details {
+    width: 100%;
+  }
+  .carousel{
+    display: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  .container{
+    position: relative;
+  }
+  .meal-card {
+    width: 75%;
+    height: auto;
+  }
+
+  .meal-title{
+    margin-top: 3rem;
+  }
+
+  .meal-content {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .meal-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .meal-details {
+    width: 100%;
+  }
+  .carousel{
+    display: none;
+  }
+    .favorite-button{
+    position: absolute;
+    left: 10rem;
+    top: 4rem;
+    width: 3rem;
+    height: 3rem;
+  }
+}
+@media (max-width: 768px) {
+  .container{
+    position: relative;
+  }
+  .meal-card {
+    width: 75%;
+    height: auto;
+  }
+
+  .meal-title{
+    margin-top: 3rem;
+  }
+
+  .meal-content {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .meal-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .meal-details {
+    width: 100%;
+  }
+  .carousel{
+    display: none;
+  }
+  
+  .favorite-button{
+    position: absolute;
+    left: 6rem;
+    top: 3.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  .fav-text{
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .meal-card {
+    width: 95%;
+    padding: 0.75rem;
+  }
+
+  .meal-title {
+    font-size: 1.25rem;
+  }
+
+  .shopping-list-title {
+    font-size: 1rem;
+  }
+
+  .button-group {
+    flex-direction: column;
+  }
+
+  .button {
+    width: 100%;
+  }
+
+  .meal-props {
+    gap: 1rem;
+  }
+  .favorite-button{
+    position: absolute;
+    left: 3rem;
+    top: 3rem;
+    width: 2rem;
+    height: 2rem;
+  }
+  .fav-text{
+    display: none;
+  }
 }
 </style>

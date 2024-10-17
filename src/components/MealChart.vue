@@ -72,6 +72,7 @@ export default defineComponent({
     })
 
     const chartOptions = computed(() => {
+
       if (props.effort === 'egal') {
         return {
           circumference: 180,
@@ -97,7 +98,28 @@ export default defineComponent({
 
 <style scoped>
 .chart-wrapper {
-  width: 5rem;
-  height: 5rem;
+  width: 4rem;
+  height: 4rem;
+
+
+  @media (max-width: 640px) {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  @media (max-width: 768px) {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  @media (max-width: 1024px) {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  @media (min-width: 1280px) {
+    width: 5rem;
+    height: 5rem;
+  }
 }
 </style>

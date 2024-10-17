@@ -42,13 +42,8 @@
               <p class="lorem">
                 Occaecat proident nostrud sit adipisicing tempor aute ipsum anim
                 reprehenderit irure dolor est. Aute officia ex est et irure ex
-                excepteur amet ullamco irure sint aliquip anim. Culpa nisi dolor
-                proident irure id occaecat.Aute proident amet ullamco
-                consectetur commodo et magna aute velit dolor. Elit occaecat
-                proident incididunt ea occaecat ullamco elit amet culpa minim.
-                Incididunt minim cillum fugiat qui aliqua.
+                excepteur amet ullamco irure sint aliquip anim.
               </p>
-              <!-- <p>{{ store.favoritesArray }}</p> -->
               <h3 class="shopping-list-title">Einkaufsliste</h3>
               <ul class="shopping-list">
                 <li v-for="item in meal.ingredients" :key="item">
@@ -112,7 +107,7 @@ onUnmounted(() => {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.4);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -121,95 +116,73 @@ onUnmounted(() => {
 
 .modal-content {
   position: relative;
-  background-color: rgb(245, 245, 245);
-  padding: 2rem;
+  background-color: white;
+  padding: 1.5rem;
   border-radius: 8px;
   max-width: 80%;
-  max-height: 90%;
+  max-height: 80%;
   overflow-y: auto;
-  font-family: 'roboto';
-  font-weight: 400;
+  font-family: 'Roboto', sans-serif;
 }
 
 .meal-card-buttons {
   position: absolute;
   right: 2rem;
-  top: 3rem;
-  width: 12rem;
-  height: 2rem;
+  top: 2rem;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
+  width: 6rem;
+  height: 2rem;
 }
 
 .favorite-btn {
-  position: absolute;
-  left: 0;
   cursor: pointer;
 }
+
 .close-icon {
-  position: absolute;
-  right: 0;
-  border: none;
-  background: none;
-  cursor: pointer;
   width: 2rem;
   height: 2rem;
+  cursor: pointer;
 }
 
 .meal-title {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: bold;
-  margin-bottom: 1rem;
   text-align: center;
+  margin-bottom: 1rem;
 }
 
 .meal-content {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 
 .meal-image {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  margin-bottom: 1rem;
 }
 
 .meal-img {
-  width: 60%;
-  height: 20rem;
+  width: 100%;
+  height: auto;
   border-radius: 8px;
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4);
 }
 
-.spinner {
-  border: 4px solid #f3f3f3;
-  border-top: 4px solid #3498db;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
 .meal-details {
   padding: 1rem;
+  text-align: center;
 }
 
 .meal-props {
-  margin-bottom: 1rem;
+  position: relative;
   display: flex;
   justify-content: center;
-  text-align: center;
-  width: 100%;
-  gap: 5rem;
+  margin: auto;
+  width: 15rem;
+
 }
 
 .meal-text {
@@ -218,42 +191,90 @@ onUnmounted(() => {
 
 .lorem {
   margin-bottom: 1rem;
-  text-align: center;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 .shopping-list-title {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: bold;
-  margin-top: 2rem;
-  text-align: center;
+  margin-top: 1.5rem;
 }
 
 .shopping-list {
-  list-style-type: decimal;
+  list-style-type: none;
   padding-left: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  margin: 0;
 }
 
 .shopping-list li {
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.5rem;
 }
 
-@media (min-width: 768px) {
-  .meal-content {
-    flex-direction: row;
+/* Responsive styling for smaller screens */
+@media (max-width: 768px) {
+  .modal-content {
+    padding: 1rem;
+    max-width: 90%;
   }
 
-  .meal-image {
-    width: 50%;
+  .meal-title {
+    font-size: 1.25rem;
+    margin-bottom: 3rem;
+  }
+
+  .meal-img {
+    width: 80%;
     height: auto;
   }
 
   .meal-details {
-    width: 50%;
+    padding: 0.75rem;
+  }
+
+  .meal-props {
+    flex-direction: row;
+    gap: 0.5rem;
+  }
+
+  .shopping-list-title {
+    font-size: 1.1rem;
+  }
+
+  .shopping-list li {
+    font-size: 0.9rem;
+  }
+}
+
+/* Extra small screens (like mobile phones) */
+@media (max-width: 640px) {
+  .modal-content {
+    padding: 0.5rem;
+    max-width: 100%;
+  }
+
+  .meal-title {
+    font-size: 1.1rem;
+  }
+
+  .meal-img {
+    width: 100%;
+    height: auto;
+  }
+
+  .meal-details {
+    padding: 0.5rem;
+  }
+
+  .meal-props {
+    gap: 0.3rem;
+  }
+
+  .shopping-list-title {
+    font-size: 1rem;
+  }
+
+  .shopping-list li {
+    font-size: 0.8rem;
   }
 }
 </style>

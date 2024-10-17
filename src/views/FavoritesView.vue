@@ -1,6 +1,6 @@
 <template>
   <div class="meal-lists-view">
-    <h1>Meine Essenspläne</h1>
+    <h1 class="title">Meine Essenspläne</h1>
 
     <!-- Favorites List -->
     <div class="meal-list">
@@ -65,7 +65,7 @@
       </Draggable>
     </div>
   </div>
-  <RouterLink to="/" class="homepage-button">Zurück zur Startseite</RouterLink>
+    <RouterLink to="/meal" class="homepage-button">Zurück</RouterLink>
 </template>
 
 <script setup>
@@ -121,7 +121,7 @@ body {
 }
 .homepage-button {
   position: absolute;
-  bottom: 5rem;
+  top: 3rem;
   left: 0;
   right: 0;
   margin: auto;
@@ -141,5 +141,23 @@ body {
 
 .homepage-button:active {
   background-color: #33b1a5;
+}
+
+@media screen and (max-width: 1024px) {
+  .title{
+    font-size: 1.5rem;
+  }
+.homepage-button{
+  position: absolute;
+  top: 4rem;
+  right: 0;
+  margin-right: 2rem;
+  }
+  .delete-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
 }
 </style>
